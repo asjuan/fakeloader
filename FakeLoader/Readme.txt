@@ -1,7 +1,5 @@
 ﻿FakeLoader Library
 
-Author: Juan Alvarez
-
 This library is provided under the Microsoft Public License (Ms-PL)
 
 Fake Loader is a simple tool to retrieve data stored in plain text files.
@@ -19,7 +17,7 @@ Usage:
 
 The file OrderDetails.txt just contain tab delimited data.
 
-Important: the first row contains the headers. The sequence of the columns match the properties of the class OrderDetail.
+Important: the first row contains the headers. The sequence of the columns match the properties of the OrderDetail class.
 
 Known issues
 
