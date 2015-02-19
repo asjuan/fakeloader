@@ -1,0 +1,14 @@
+C:\Users\juan.alvarez\Dropbox\projects\MockLoader\MockLoaderTest\bin\Release\MockLoaderTest.dll
+C:\Users\juan.alvarez\Dropbox\projects\MockLoader\MockLoaderTest\bin\Release\MockLoaderTest.pdb
+C:\Users\juan.alvarez\Dropbox\projects\MockLoader\MockLoaderTest\bin\Release\MockLoader.dll
+C:\Users\juan.alvarez\Dropbox\projects\MockLoader\MockLoaderTest\bin\Release\MockLoader.pdb
+C:\Users\juan.alvarez\Dropbox\projects\MockLoader\MockLoaderTest\obj\Release\MockLoaderTest.csprojResolveAssemblyReference.cache
+C:\Users\juan.alvarez\Dropbox\projects\MockLoader\MockLoaderTest\obj\Release\MockLoaderTest.dll
+C:\Users\juan.alvarez\Dropbox\projects\MockLoader\MockLoaderTest\obj\Release\MockLoaderTest.pdb
+C:\Users\Juan\Dropbox\projects\MockLoader\MockLoaderTest\bin\Release\MockLoaderTest.dll
+C:\Users\Juan\Dropbox\projects\MockLoader\MockLoaderTest\bin\Release\MockLoaderTest.pdb
+C:\Users\Juan\Dropbox\projects\MockLoader\MockLoaderTest\bin\Release\MockLoader.dll
+C:\Users\Juan\Dropbox\projects\MockLoader\MockLoaderTest\bin\Release\MockLoader.pdb
+C:\Users\Juan\Dropbox\projects\MockLoader\MockLoaderTest\obj\Release\MockLoaderTest.csprojResolveAssemblyReference.cache
+C:\Users\Juan\Dropbox\projects\MockLoader\MockLoaderTest\obj\Release\MockLoaderTest.dll
+C:\Users\Juan\Dropbox\projects\MockLoader\MockLoaderTest\obj\Release\MockLoaderTest.pdb

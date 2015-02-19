@@ -1,0 +1,4 @@
+C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoader\bin\Debug\FakeLoader.dll
+C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoader\bin\Debug\FakeLoader.pdb
+C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoader\obj\Debug\FakeLoader.dll
+C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoader\obj\Debug\FakeLoader.pdb
