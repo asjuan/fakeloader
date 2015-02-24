@@ -1,4 +1,0 @@
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoader\bin\Release\FakeLoader.dll
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoader\bin\Release\FakeLoader.pdb
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoader\obj\Release\FakeLoader.dll
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoader\obj\Release\FakeLoader.pdb

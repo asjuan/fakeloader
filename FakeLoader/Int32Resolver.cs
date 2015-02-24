@@ -1,4 +1,5 @@
-﻿namespace FakeLoader
+﻿using System;
+namespace FakeLoader
 {
     class Int32Resolver:IParseResolver
     {
@@ -9,9 +10,11 @@
         }
         public object Parse(string value)
         {
+            int result;
             if (string.IsNullOrEmpty(value)) return null;
             if (value.ToUpper().Equals("NULL")) return null;
-            return int.Parse(value);
+            if (int.TryParse(value, out result)) return result;
+            throw new InvalidCastException("Cannot resolve type, check delimiter");
         }
     }
 }

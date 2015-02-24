@@ -1,7 +1,0 @@
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoaderTest\bin\Debug\FakeLoaderTest.dll
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoaderTest\bin\Debug\FakeLoaderTest.pdb
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoaderTest\bin\Debug\FakeLoader.dll
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoaderTest\bin\Debug\FakeLoader.pdb
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoaderTest\obj\Debug\FakeLoaderTest.csprojResolveAssemblyReference.cache
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoaderTest\obj\Debug\FakeLoaderTest.dll
-C:\Users\Juan\Dropbox\projects\FakeLoader\FakeLoaderTest\obj\Debug\FakeLoaderTest.pdb

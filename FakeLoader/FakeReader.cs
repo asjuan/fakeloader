@@ -25,9 +25,11 @@ namespace FakeLoader
         }
         
 
-        internal List<T1> GetInstances<T1>(IEnumerable<string[]> items, System.Func<string[], T1> func)
+        internal List<T1> GetInstances<T1>(IEnumerable<string[]> items,bool skipFirstRow , System.Func<string[], T1> func)
         {
-            return items.Where(o => !string.IsNullOrEmpty(o[0])).Skip(1).Select(o=>func(o)).ToList();
+            var result = items.Where(o => !string.IsNullOrEmpty(o[0]));
+            if (skipFirstRow) result = result.Skip(1);
+            return result.Select(o=>func(o)).ToList();
         }
     }
 }

@@ -60,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\OrderDetails.txt" />
+    <Content Include="Resources\SameByComma.txt" />
+    <Content Include="Resources\SameByPipes.txt" />
+    <Content Include="Resources\SameByWhitespace.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FakeLoader\FakeLoader.csproj">
