@@ -35,7 +35,31 @@ namespace MockLoaderTest
         [TestMethod]
         public void ShouldGet5EntriesUsingSyntacticImprovements()
         {
-            var orderDetails = RetrieveFake.From(@"..\..\Resources\OrderDetails.txt").SeparateBy('\t').GetAListOf<OrderDetail>();
+            var orderDetails = RetrieveFake.From(@"..\..\Resources\OrderDetails.txt").DelimitBy('\t').GetAListOf<OrderDetail>();
+            Assert.AreEqual(orderDetails.Count, 5);
+        }
+        [TestMethod]
+        public void ShouldGet5EntriesUsingSyntacticSugarByTab()
+        {
+            var orderDetails = RetrieveFake.From(@"..\..\Resources\OrderDetails.txt").DelimitBy(ColumnDelimiter.Tab).GetAListOf<OrderDetail>();
+            Assert.AreEqual(orderDetails.Count, 5);
+        }
+        [TestMethod]
+        public void ShouldGet5EntriesUsingSyntacticSugarByComma()
+        {
+            var orderDetails = RetrieveFake.From(@"..\..\Resources\SameByComma.txt").DelimitBy(ColumnDelimiter.Comma).GetAListOf<OrderDetail>();
+            Assert.AreEqual(orderDetails.Count, 5);
+        }
+        [TestMethod]
+        public void ShouldGet5EntriesUsingSyntacticSugarByPipe()
+        {
+            var orderDetails = RetrieveFake.From(@"..\..\Resources\SameByPipes.txt").DelimitBy(ColumnDelimiter.Pipe).GetAListOf<OrderDetail>(skipHeaders:true);
+            Assert.AreEqual(orderDetails.Count, 5);
+        }
+        [TestMethod]
+        public void ShouldGet5EntriesUsingSyntacticSugarByWhitespace()
+        {
+            var orderDetails = RetrieveFake.From(@"..\..\Resources\SameByWhitespace.txt").DelimitBy(ColumnDelimiter.WhiteSpace).GetAListOf<OrderDetail>(skipHeaders:false);
             Assert.AreEqual(orderDetails.Count, 5);
         }
     }

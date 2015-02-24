@@ -46,6 +46,7 @@
     <Compile Include="BooleanResolver.cs" />
     <Compile Include="ByteResolver.cs" />
     <Compile Include="DecimalResolver.cs" />
+    <Compile Include="ColumnDelimiter.cs" />
     <Compile Include="DoubleResolver.cs" />
     <Compile Include="Int32Resolver.cs" />
     <Compile Include="IParseResolver.cs" />
