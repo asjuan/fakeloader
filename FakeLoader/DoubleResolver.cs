@@ -5,7 +5,7 @@
         public IParseResolver GetResolver(string name)
         {
             if (name.Contains("Double")) return this; 
-            return new NullResolver().GetResolver(name);
+            return new Int64Resolver().GetResolver(name);
         }
         public object Parse(string value)
         {

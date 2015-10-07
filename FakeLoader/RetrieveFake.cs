@@ -41,6 +41,5 @@ namespace FakeLoader
             var mapper = new FakeMapper<T>();
             return reader.GetInstances<T>(splitedItems, skipHeaders, mapper.PickInstance);
         }
-        
     }
 }

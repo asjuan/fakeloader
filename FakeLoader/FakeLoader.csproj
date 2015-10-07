@@ -49,6 +49,7 @@
     <Compile Include="ColumnDelimiter.cs" />
     <Compile Include="DoubleResolver.cs" />
     <Compile Include="Int32Resolver.cs" />
+    <Compile Include="Int64Resolver.cs" />
     <Compile Include="IParseResolver.cs" />
     <Compile Include="NullResolver.cs" />
     <Compile Include="ParseResolver.cs" />
