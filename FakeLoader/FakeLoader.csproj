@@ -54,6 +54,7 @@
     <Compile Include="NullResolver.cs" />
     <Compile Include="ParseResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyReader.cs" />
     <Compile Include="RetrieveFake.cs" />
     <Compile Include="StringResolver.cs" />
     <Compile Include="FakeMapper.cs" />

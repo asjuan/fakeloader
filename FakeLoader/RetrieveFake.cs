@@ -13,8 +13,9 @@ namespace FakeLoader
             var reader = new FakeReader();
             return reader.GetLinesSplitedBy(lines, delimiter);
         }
-        public static IEnumerable<string[]> DelimitBy(this IEnumerable<string> lines, ColumnDelimiter delimiter) {
-            var charDelimiter = '\t';            
+        public static IEnumerable<string[]> DelimitBy(this IEnumerable<string> lines, ColumnDelimiter delimiter)
+        {
+            var charDelimiter = '\t';
             switch (delimiter)
             {
                 case ColumnDelimiter.Colon:
@@ -35,11 +36,12 @@ namespace FakeLoader
             }
             return DelimitBy(lines, charDelimiter);
         }
-        public static List<T> GetAListOf<T>(this IEnumerable<string[]> splitedItems, bool skipHeaders = true) where T : new()
+        public static List<T> GetAListOf<T>(this IEnumerable<string[]> splitedItems, PropertyReader propertyReader = PropertyReader.SkipHeaders) where T : new()
         {
             var reader = new FakeReader();
             var mapper = new FakeMapper<T>();
-            return reader.GetInstances<T>(splitedItems, skipHeaders, mapper.PickInstance);
+            
+            return reader.GetInstances<T>(splitedItems, propertyReader, mapper);
         }
     }
 }

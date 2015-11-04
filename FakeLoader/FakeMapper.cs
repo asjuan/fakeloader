@@ -1,8 +1,9 @@
-﻿namespace FakeLoader
+﻿using System;
+namespace FakeLoader
 {
     public class FakeMapper<T> where T : new()
     {
-        public T PickInstance(string[] values)
+        public T PickInstance(string[] values, Func<string[], string, int, string> sorter)
         {
             var instance = new T();
             var properties = typeof(T).GetProperties();
@@ -11,9 +12,10 @@
                 var property = properties[counter];
                 var parser = new ParseResolver();
                 var resolver = parser.GetResolver(property.PropertyType.FullName);
-                if (resolver.GetType()!=typeof(NullResolver))
+                if (resolver.GetType() != typeof(NullResolver))
                 {
-                    property.SetValue(instance, resolver.Parse(values[counter]));
+                    var value = sorter(values, property.Name, counter);
+                    property.SetValue(instance, resolver.Parse(value));
                 }
             }
             return instance;
