@@ -65,7 +65,7 @@ namespace MockLoaderTest
         [TestMethod]
         public void ShouldGet5EntriesFirstRowContainsFieldNames()
         {
-            var orderDetails = RetrieveFake.From(@"..\..\Resources\FieldNamesByPipes.txt").DelimitBy(ColumnDelimiter.Pipe).GetAListOf<OrderDetail>(PropertyReader.UseHeadersToInferProperties);
+            var orderDetails = RetrieveFake.From(@"..\..\Resources\UnsortedByPipes.txt").DelimitBy(ColumnDelimiter.Pipe).GetAListOf<OrderDetail>(PropertyReader.UseHeadersToInferProperties);
             Assert.AreEqual(orderDetails.Count, 5);
         }
     }

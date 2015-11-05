@@ -59,6 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\UnsortedByPipes.txt" />
     <Content Include="Resources\OrderDetails.txt" />
     <Content Include="Resources\SameByComma.txt" />
     <Content Include="Resources\SameByPipes.txt" />
