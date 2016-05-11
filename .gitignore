@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/FakeLoader/v14
+/FakeLoader/bin/Debug
+/FakeLoader/obj/Debug
+/FakeLoaderTest/bin/Debug
+/FakeLoaderTest/obj/Debug

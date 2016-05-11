@@ -28,14 +28,14 @@ namespace FakeLoader
                 .Select(p => mapper.PickInstance(p, (values, pn, pos) => values[pos]));
         }
 
-        public List<T1> GetInstances<T1>(IEnumerable<string[]> items, PropertyReader propertyReader, FakeMapper<T1> mapper) where T1 : new()
+        public List<T1> GetInstances<T1>(IEnumerable<string[]> items, MapperConfiguration configuration, FakeMapper<T1> mapper) where T1 : new()
         {
             var result = items.Where(o => !string.IsNullOrEmpty(o[0]));
-            if (propertyReader == PropertyReader.SkipHeaders)
+            if (configuration.DefaultPropertyReader == PropertyReader.SkipHeaders)
             {
                 result = result.Skip(1);
             }
-            else if (propertyReader == PropertyReader.UseHeadersToInferProperties)
+            else if (configuration.DefaultPropertyReader == PropertyReader.UseHeadersToInferProperties)
             {
                 var header = result.First();
                 return result.Skip(1).Select(o => mapper.PickInstance(o,
@@ -45,7 +45,19 @@ namespace FakeLoader
                         return values[index];
                     })).ToList();
             }
-            return result.Select(o => mapper.PickInstance(o, (values, pn, pos) => values[pos])).ToList();
+            if (configuration.MapPositions != null)
+            {
+                return result
+                    .Select(o => mapper.PickInstance(o, (values, pn, pos) =>
+                    {
+                        var index = configuration.MapPositions.ToList().FindIndex(t => t.Equals(pn));
+                        return values[index];
+                    }))
+                    .ToList();
+            }
+            return result
+                .Select(o => mapper.PickInstance(o, (values, pn, pos) => values[pos]))
+                .ToList();
         }
     }
 }

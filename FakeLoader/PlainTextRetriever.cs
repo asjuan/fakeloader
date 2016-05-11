@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿
 namespace FakeLoader
 {
-    public class RetrieveFake
+    public class PlainTextRetriever
     {
         public static BaseRetriever From(string source)
         {
