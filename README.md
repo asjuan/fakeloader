@@ -1,7 +1,10 @@
 ## FakeLoader Library
 ### License
+
 This library is provided under the Microsoft Public License (Ms-PL)
+
 ### Abstract
+
 Fake Loader is a simple tool to retrieve data stored in plain text files. It is targeted for the .Net Framework version 4.5+.
 
 Nowadays it doesn't the flavor, testing is a must. There are several good practices around, sometimes you use mocks or stubs, prior to concrete implementations. But some times you just need to take a shortcut and retrieve something to test functionallity.
@@ -9,13 +12,21 @@ Nowadays it doesn't the flavor, testing is a must. There are several good practi
 One common approach is to implement a MotherClass or a Factory so your tests
 can invoke it. From my experience I know that it requires effort to maintain that additional piece of code. That's the problem this little library tries to address,
 by storing sample data in a plain text file and mapping that data to a concrete class, so new instances can be retrieved just as you do with a factory.
+
 #### Usage
+
 Find below a simple example in C#
+
 `
+
             var orderDetails = PlainTextRetriever
+            
                                             .From(@"..\..\Resources\OrderDetails.txt")
+                                            
                                               .DelimitBy(ColumnDelimiter.Tab)
+                                              
                                                .GetAListOf<OrderDetail>();
+                                               
             Assert.AreEqual(orderDetails.Count, 5);
 `
 
@@ -24,6 +35,7 @@ The file OrderDetails.txt just contain tab delimited data.
 Important the first row contains the headers, by default it being skipped. The sequence of the columns match the properties of the OrderDetail class, to override this behavior see the documentation.
 
 ### How to install
+
 From Microsoft's Visual Studio open the NuGet Package Manager console and type
 
 `
@@ -31,7 +43,9 @@ Install-Package FakeLoader
 `
 
 ### How to use
+
 FakeLoader was designed to use a fluent like syntax. The readme file includes the following example written in C#
+
 `
 
             var orderDetails = PlainTextRetriever            
