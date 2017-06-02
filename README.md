@@ -17,16 +17,14 @@ by storing sample data in a plain text file and mapping that data to a concrete 
 
 Find below a simple example in C#
 
-`
-
-            var orderDetails = PlainTextRetriever
-            
-                                            .From(@"..\..\Resources\OrderDetails.txt")
-                                            .DelimitBy(ColumnDelimiter.Tab)
-                                            .GetAListOf<OrderDetail>();
-                                               
-            Assert.AreEqual(orderDetails.Count, 5);
-`
+```
+    var orderDetails = PlainTextRetriever           
+                         .From(@"..\..\Resources\OrderDetails.txt")
+                         .DelimitBy(ColumnDelimiter.Tab)
+                         .GetAListOf<OrderDetail>();
+                       
+    Assert.AreEqual(orderDetails.Count, 5);
+```
 
 The file OrderDetails.txt just contain tab delimited data.
 
@@ -36,23 +34,22 @@ Important the first row contains the headers, by default it being skipped. The s
 
 From Microsoft's Visual Studio open the NuGet Package Manager console and type
 
-`
+```
 Install-Package FakeLoader
-`
+```
 
 ### How to use
 
 FakeLoader was designed to use a fluent like syntax. The readme file includes the following example written in C#
 
-`
-
+```
             var orderDetails = PlainTextRetriever            
                .From(@"..\..\Resources\OrderDetails.txt")
                .DelimitBy(ColumnDelimiter.Tab)
                .GetAListOf<OrderDetail>();
                                                
             Assert.AreEqual(orderDetails.Count, 5);
-`
+```
 
 ### Backwards Compatibility
 
@@ -70,31 +67,27 @@ This method gets a list of the specified class. This method will skip the first 
 
 To avoid default behavior and read everything use it like in the following example, by using a custom mapper
 
-`
-
+```
      var orderDetails = PlainTextRetriever.From(@"file.txt")
-
                 .DelimitBy(ColumnDelimiter.Comma)
-
                 .GetAListOf<OrderDetail>(
                 new MapperConfiguration
                 {
                     DefaultPropertyReader = PropertyReader.SkipHeaders,
                     MapPositions = new string[6] { "Id", "Description", "OrderId", "Quantity", "IsPriority", "Price" });
-`
+```
 
 GetAListOf overload can also try to infer properties from the headers, by using the following switch infer mappings
 
-`
+```
 
     var orderDetails = PlainTextRetriever.From(@"file2.txt").DelimitBy(ColumnDelimiter.Comma)
-
                 .GetAListOf<OrderDetail>(
                 new MapperConfiguration
                 {
                     DefaultPropertyReader = PropertyReader.UseHeadersToInferProperties
                 }
-`
+```
 
 ### Tip
 This library can be combined with Moq, so you can easily mimic responses coming from a method or property.
