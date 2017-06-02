@@ -22,10 +22,8 @@ Find below a simple example in C#
             var orderDetails = PlainTextRetriever
             
                                             .From(@"..\..\Resources\OrderDetails.txt")
-                                            
-                                              .DelimitBy(ColumnDelimiter.Tab)
-                                              
-                                               .GetAListOf<OrderDetail>();
+                                            .DelimitBy(ColumnDelimiter.Tab)
+                                            .GetAListOf<OrderDetail>();
                                                
             Assert.AreEqual(orderDetails.Count, 5);
 `
@@ -56,7 +54,7 @@ FakeLoader was designed to use a fluent like syntax. The readme file includes th
             Assert.AreEqual(orderDetails.Count, 5);
 `
 
-!!Backward Compatibility
+### Backwards Compatibility
 
 The RetrieveFake object is still available, but will be deprecated in future versions
 #### Methods
@@ -70,12 +68,11 @@ overload provided to pass in a char.
 ##### GetAListOf<T>()
 This method gets a list of the specified class. This method will skip the first row, assuming it contains headers.
 
-To avoid default behavior and read everything use it like in the following example
+To avoid default behavior and read everything use it like in the following example, by using a custom mapper
+
 `
 
-//To use a custom mapper
-
-var orderDetails = PlainTextRetriever.From(@"file.txt")
+     var orderDetails = PlainTextRetriever.From(@"file.txt")
 
                 .DelimitBy(ColumnDelimiter.Comma)
 
@@ -86,11 +83,11 @@ var orderDetails = PlainTextRetriever.From(@"file.txt")
                     MapPositions = new string[6] { "Id", "Description", "OrderId", "Quantity", "IsPriority", "Price" });
 `
 
-That overload can also try to infer properties from the headers using the following switch
-`
-//Use headers to infer mappings
+GetAListOf overload can also try to infer properties from the headers, by using the following switch infer mappings
 
-var orderDetails = PlainTextRetriever.From(@"file2.txt").DelimitBy(ColumnDelimiter.Comma)
+`
+
+    var orderDetails = PlainTextRetriever.From(@"file2.txt").DelimitBy(ColumnDelimiter.Comma)
 
                 .GetAListOf<OrderDetail>(
                 new MapperConfiguration
