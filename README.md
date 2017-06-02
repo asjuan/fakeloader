@@ -7,7 +7,7 @@ This library is provided under the Microsoft Public License (Ms-PL)
 
 Fake Loader is a simple tool to retrieve data stored in plain text files. It is targeted for the .Net Framework version 4.5+.
 
-Nowadays it doesn't the flavor, testing is a must. There are several good practices around, sometimes you use mocks or stubs, prior to concrete implementations. But some times you just need to take a shortcut and retrieve something to test functionallity.
+It doesn't matter the flavor, testing is a must. There are several good practices around, sometimes to use mocks or stubs, prior to concrete implementations. But some times you just need to take a shortcut and retrieve something to test functionallity.
 
 One common approach is to implement a MotherClass or a Factory so your tests
 can invoke it. From my experience I know that it requires effort to maintain that additional piece of code. That's the problem this little library tries to address,
