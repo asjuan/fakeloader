@@ -1,3 +1,6 @@
+# Deprecation notice
+Consider using file2objects project I created. It is also available here in github
+
 ## FakeLoader Library
 ### License
 
